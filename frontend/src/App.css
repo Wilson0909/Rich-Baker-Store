@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Lobster&display=swap');
+@import 'remixicon/fonts/remixicon.css';
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html{
+  overflow-x: hidden;
+}
+
+
+
+.post {
+  width:70%;
+  height: 300px;
+  border-radius: 10px;
+  display: flex;
+  justify-self: center;
+  margin-bottom: 50px;
+  flex-direction: column;
+  margin-top: 50px;
+  border: 1px solid lightgray;
+  font-family: Arial, Helvetica, sans-serif;
+
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.post:hover {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  cursor: pointer;
+}
+
+
+.post .title {
+  flex: 20%;
+  border-bottom: 1px solid lightgray;
+  display: grid;
+  place-content: center;
+  color: white;
+}
+
+.post .body {
+  flex: 60%;
+  display: grid;
+  place-content: center;
+}
+
+.post .footer {
+  flex: 20%;
+  border-top: 1px solid lightgray;
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  color: white;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/* CREATE POST PAGE CSS */
+
+.createPostPage {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100vw;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 500px;
+  height: auto;
+  padding: 20px;
+  border: 5px solid;
+  border-radius: 5px;
+}
+
+.formContainer #inputCreatePost {
+  height: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 2px solid grey;
+  border-radius: 5px;
+  padding-left: 10px;
+  font-size: 20px;
+  color: black;
+}
+
+.formContainer button {
+  margin-top: 15px;
+  height: 40px;
+  border: none;
+  background-color: lightskyblue;
+  border-radius: 5px;
+  color: white;
+}
+
+.formContainer button:hover {
+  cursor: pointer;
+  background-color: dodgerblue;
+}
+
+span {
+  color: red;
+}
+
+
+
+/* INDIVIDUAL POST */
+.postPage {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+
+.leftSide {
+  flex: 50%;
+  height: calc(100vh - 70px);
+  display: grid;
+  place-items: center;
+  justify-items: center;
+  
+}
+
+.rightSide {
+  flex: 50%;
+  height: calc(100vh - 70px);
+  display: grid;
+  place-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.rightSide .addCommentContainer {
+  flex: 20%;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  margin-top: 25px;
+}
+
+.addCommentContainer input,
+button {
+  width: 200px;
+  height: 50px;
+  border-radius: 8px;
+  border: none;
+}
+
+.addCommentContainer button {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.addCommentContainer input {
+  border: 2px solid dodgerblue;
+  color: black;
+}
+
+.rightSide .listOfComments {
+  flex: 80%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: black;
+}
+
+.listOfComments .comment {
+  width: 70%;
+  height: auto;
+  padding: 30px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  margin-top: 20px;
+
+}
+
+#individual {
+  height: 500px;
+  width: 600px;
+}
+
+#individual .title,
+#individual .footer {
+  font-size: 30px;
+}
+
+#individual .body {
+  font-size: 25px;
+}
+
+/* LOGIN */
+
+.loginContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  padding-top: 100px;
+}
+
+.loginContainer input,
+button {
+  width: 200px;
+  height: 50px;
+  border-radius: 8px;
+  border: none;
+  margin: 10px;
+}
+
+.loginContainer button {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.loginContainer input {
+  border: 2px solid dodgerblue;
+}
+
+body{
+  @apply bg-stone-700 text-white font-Jost tracking-wider
+}
+
+
+section{
+  @apply py-20 md:py-28
+}
+
+h1{
+  @apply text-3xl md:text-4xl xl:text-5xl font-semibold
+}
+
+
+/* untuk bagian nav link membuat tulis nya menjadi bold */
+.nav-link{
+  @apply text-lg font-bold duration-300 
+}
+
+
+.nav-link:hover{
+  @apply text-yellow-500
+}
+
+
+.active{
+  @apply text-yellow-500
+}
+
+
+
+
+h2{
+  @apply text-2xl md:text-3xl xl:text-4xl;
+}
+
+h3{
+  @apply text-2xl md:text-3xl xl:text-4xl ;
+}
+
+
+
+/* button */
+.btn{
+  @apply border border-yellow-500 bg-yellow-500 rounded-md px-5 py-1 duration-300
+}
+
+.btn span{
+  @apply font-bold text-slate-500;
+}
+
+.btn:hover{
+  @apply opacity-90;
+}
+
+.btn_outline{
+  @apply bg-zinc-300;
+}
+
+.btn_outline:hover{
+  @apply bg-yellow-500
+}
+
+.popular__card:hover img{
+  @apply -top-8;
+}
+
+.swiper-pagination-bullet{
+  @apply bg-green-500 w-3 h-3;
+}
