@@ -1,0 +1,36 @@
+GET http://localhost:3001/posts/byID/1
+
+
+
+###
+GET http://localhost:3001/comments/1
+
+
+###
+POST http://localhost:3001/comments
+Content-Type: application/json
+
+{
+    "commentBody":"tapi boong",
+    "PostId":1
+}
+
+
+###
+POST http://localhost:3001/auth
+Content-Type: application/json
+
+{
+    "username": "Wilson",
+    "password": "wilson"
+}
+
+
+###
+POST http://localhost:3001/auth/login
+Content-Type: application/json
+
+{
+    "username": "WilsonTechsdfs",
+    "password": "helloworld"
+}
